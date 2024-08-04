@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos04</title>
+    <style>
+        body{
+            background-color: #aaa;
+        }
+        input{
+            border: 2px solid black;
+            border-radius: 5px 5px;
+            box-shadow: 5px 3px;
+            cursor: pointer;
+        }
+        input:hover{
+            background-color: red;
+            color: white;
+        }
+        div{
+                margin-bottom:  10px;
+            }
+    </style>
+</head>
+<body>
+    <input type="text" id="texto"><br>
+    <form action="" method="get" name="f_formulario"  > 
+        <div> 
+            <label for="usuario"> Usúario :</label>
+            <input type="text" name="usuario" id="usuario">
+        </div> 
+            <label for="senha"> senha:</label>
+            <input type="password" name="senha" id="senha">
+        </div>
+        <div> 
+            <input type="submit" value="Entrar">
+        </div>
+    </form>
+    <script>
+       let elemento = document.querySelector('#texto')
+       elemento.addEventListener('keydown' , ()=>{
+        console.log ('pressionou')
+       })
+       elemento.addEventListener('keyup',()=>{
+        console.log('largou')
+       } )
+        console.log(document.forms ['f_formulario'])
+    </script>
+</body>
+</html>
